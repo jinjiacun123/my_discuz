@@ -9,7 +9,7 @@ Created & Modified by 北北″.
 
 #toptb a { color: #DADADA; }
 #hd { margin-top: 15px; }
-#hd h2 { padding: 10px 20px 8px 0; }
+#hd h2 { padding: 5px 20px 0px 0; }
 #hd .wp { width: 1000px; padding: 0; }
 .hdc { min-height: 90px; }
 				.ie6 .hdc { height: 90px; }
@@ -27,8 +27,8 @@ Created & Modified by 北北″.
 #online .bm_h { border: none; height: 32px; line-height: 32px; background: url({STYLEIMGDIR}/ol_bg.png) repeat-x 0 0; }
 
 
-#dfsj_wp { width: 1000px; margin: 0 auto 30px;border-radius: 5px; padding: 5px; }
-#dfsj_wpx { -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; padding: 8px; }
+#dfsj_wp { width: 1000px; margin: 0 auto 30px;border-radius: 5px; padding:0px 5px; }
+#dfsj_wpx { -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; padding:0px 8px; }
 #dfsj_wpxx { margin-top: 20px; border-radius: 5px; }
 #dfsj_wpxx #wp { background: #fff; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; padding: 5px; }
 #ft { border-top: none; padding: 20px 0; }
@@ -39,9 +39,9 @@ Created & Modified by 北北″.
 					.ie_all #nv li { line-height: 43px; }
 					.ie6 #nv li { line-height: 40px; }
 					#nv li a { height: 40px; text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5); }
-					#nv li.a { margin-left: 0; }
-						#nv li a:hover { color: #fff; background: url({STYLEIMGDIR}/nv_a.png) repeat-x 0 50%; text-decoration: none; }
-						#nv li.hover a:hover, #nv li.hover a { background: url({STYLEIMGDIR}/nv_a.png) repeat-x 0 50% }
+					#nv li.a { margin-left: 0;background: url({STYLEIMGDIR}/nv.png) repeat-x 0 100%; }
+					#nv li a:hover { color: #fff; background: url({STYLEIMGDIR}/nv.png) repeat-x 0 100%; text-decoration: none; }
+					#nv li.hover a:hover, #nv li.hover a { background: url({STYLEIMGDIR}/nv.png) repeat-x 0 100% }
 
 				#mu ul { background: url({IMGDIR}/mu_bg.png) no-repeat 0 100%; line-height: 22px; z-index: 2; font-size: 12px; }
 
@@ -52,3 +52,5 @@ Created & Modified by 北北″.
 .zc_footer{color: #fff; font-size: 13px;text-align: center;}
 .zc_footer p{text-align: center;}
 .zc_footer p.p2{color: #999;}
+.pls .favatar dt{padding-left:5px;text-align: right;}
+.pls .favatar dd{margin-left:5px; }

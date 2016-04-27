@@ -472,7 +472,7 @@ CSS 写作注意事项：
 */
 .ftid { float: left; margin-right: 6px; }
 	.ftid select { float: left; height: 23px; }
-	.ftid a { display: block; overflow: hidden; padding: 0 17px 0 4px; height: 21px; line-height: 21px; text-decoration: none !important; font-size: 12px; font-weight: 400; color: {TABLETEXT} !important; border: 1px solid; border-color: {INPUTBORDERDARKCOLOR} {INPUTBORDER} {INPUTBORDER} {INPUTBORDERDARKCOLOR}; background: {WRAPBG} url({IMGDIR}/newarow.gif) no-repeat 100% 0; }
+	.ftid a { display: block; overflow: hidden; padding: 0 17px 0 4px; height: 21px; line-height: 21px; text-decoration: none !important; font-size: 12px; font-weight: 400; color: {TABLETEXT} !important; border: 1px solid; border-color: {INPUTBORDERDARKCOLOR} {INPUTBORDER} {INPUTBORDER} {INPUTBORDERDARKCOLOR}; /*background: {WRAPBG} url({IMGDIR}/newarow.gif) no-repeat 100% 0;*/ }
 		.ftid a:hover, .ftid a:focus { background-position: 100% -23px; }
 	/* ctrl 'select' width */
 	.ftid select { width: 94px; }

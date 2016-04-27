@@ -1,15 +1,15 @@
 <?php if(!defined('IN_DISCUZ')) exit('Access Denied'); 
 0
-|| checktplrefresh('./template/dfsj_poertklmnr/common/header.htm', './template/dfsj_poertklmnr/common/header_common.htm', 1461668544, '2', './data/template/2_2_common_header_member_logging.tpl.php', './template/dfsj_poertklmnr', 'common/header_member_logging')
-|| checktplrefresh('./template/dfsj_poertklmnr/common/header.htm', './template/default/common/header_qmenu.htm', 1461668544, '2', './data/template/2_2_common_header_member_logging.tpl.php', './template/dfsj_poertklmnr', 'common/header_member_logging')
-|| checktplrefresh('./template/dfsj_poertklmnr/common/header.htm', './template/default/common/pubsearchform.htm', 1461668544, '2', './data/template/2_2_common_header_member_logging.tpl.php', './template/dfsj_poertklmnr', 'common/header_member_logging')
+|| checktplrefresh('./template/dfsj_poertklmnr/common/header.htm', './template/dfsj_poertklmnr/common/header_common.htm', 1461754895, '2', './data/template/2_2_common_header_member_logging.tpl.php', './template/dfsj_poertklmnr', 'common/header_member_logging')
+|| checktplrefresh('./template/dfsj_poertklmnr/common/header.htm', './template/default/common/header_qmenu.htm', 1461754895, '2', './data/template/2_2_common_header_member_logging.tpl.php', './template/dfsj_poertklmnr', 'common/header_member_logging')
+|| checktplrefresh('./template/dfsj_poertklmnr/common/header.htm', './template/default/common/pubsearchform.htm', 1461754895, '2', './data/template/2_2_common_header_member_logging.tpl.php', './template/dfsj_poertklmnr', 'common/header_member_logging')
 ;?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=<?php echo CHARSET;?>" />
 <?php if($_G['config']['output']['iecompatible']) { ?><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE<?php echo $_G['config']['output']['iecompatible'];?>" /><?php } ?>
-<title><?php if(!empty($navtitle)) { ?><?php echo $navtitle;?> - <?php } if(empty($nobbname)) { ?> <?php echo $_G['setting']['bbname'];?> - <?php } ?> Powered by Discuz!</title>
+<title><?php if(!empty($navtitle)) { ?><?php echo $navtitle;?><?php } if(empty($nobbname)) { ?> <?php echo $_G['setting']['bbname'];?><?php } ?></title>
 <?php echo $_G['setting']['seohead'];?>
 
 <meta name="keywords" content="<?php if(!empty($metakeywords)) { echo dhtmlspecialchars($metakeywords); } ?>" />
@@ -66,7 +66,7 @@
 <div class="z"><?php if(is_array($_G['setting']['topnavs']['0'])) foreach($_G['setting']['topnavs']['0'] as $nav) { if($nav['available'] && (!$nav['level'] || ($nav['level'] == 1 && $_G['uid']) || ($nav['level'] == 2 && $_G['adminid'] > 0) || ($nav['level'] == 3 && $_G['adminid'] == 1))) { ?><?php echo $nav['code'];?><?php } } ?>
 <?php if(!empty($_G['setting']['pluginhooks']['global_cpnav_extra1'])) echo $_G['setting']['pluginhooks']['global_cpnav_extra1'];?>
 </div>
-<div class="y">
+<div class="y" style="display:none;">
 <a id="switchblind" href="javascript:;" onclick="toggleBlind(this)" title="开启辅助访问" class="switchblind">开启辅助访问</a>
 <?php if(!empty($_G['setting']['pluginhooks']['global_cpnav_extra2'])) echo $_G['setting']['pluginhooks']['global_cpnav_extra2'];?><?php if(is_array($_G['setting']['topnavs']['1'])) foreach($_G['setting']['topnavs']['1'] as $nav) { if($nav['available'] && (!$nav['level'] || ($nav['level'] == 1 && $_G['uid']) || ($nav['level'] == 2 && $_G['adminid'] > 0) || ($nav['level'] == 3 && $_G['adminid'] == 1))) { ?><?php echo $nav['code'];?><?php } } if(empty($_G['disabledwidthauto']) && $_G['setting']['switchwidthauto']) { ?>
 <a href="javascript:;" id="switchwidth" onclick="widthauto(this)" title="<?php if(widthauto()) { ?>切换到窄版<?php } else { ?>切换到宽版<?php } ?>" class="switchwidth"><?php if(widthauto()) { ?>切换到窄版<?php } else { ?>切换到宽版<?php } ?></a>
@@ -217,7 +217,7 @@ EOF;
 </div>
 <ul id="scbar_type_menu" class="p_pop" style="display: none;"><?php echo implode('', $slist);; ?></ul>
 <script type="text/javascript">
-//initSearchmenu('scbar', '<?php echo $searchparams['url'];?>');
+initSearchmenu('scbar', '<?php echo $searchparams['url'];?>');
 </script>
 <?php } ?><div id="nv">
 <a href="javascript:;" id="qmenu" onmouseover="delayShow(this, function () {showMenu({'ctrlid':'qmenu','pos':'34!','ctrlclass':'a','duration':2});showForummenu(<?php echo $_G['fid'];?>);})">快速发帖</a>

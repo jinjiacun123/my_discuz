@@ -9,7 +9,7 @@
 <?php if(!$_G['setting']['autoidselect']) { ?>
 <td>
 <span class="ftid">
-<select name="fastloginfield" id="ls_fastloginfield" width="40" tabindex="900">
+<select style="display:none" name="fastloginfield" id="ls_fastloginfield" width="40" tabindex="900">
 <option value="username">用户名</option>
 <?php if(getglobal('setting/uidlogin')) { ?>
 <option value="uid">UID</option>
@@ -17,7 +17,8 @@
 <option value="email">Email</option>
 </select>
 </span>
-<script type="text/javascript">simulateSelect('ls_fastloginfield')</script>
+用户名
+<script type="text/javascript">//simulateSelect('ls_fastloginfield')</script>
 </td>
 <td><input type="text" name="username" id="ls_username" autocomplete="off" class="px vm" tabindex="901" /></td>
 <?php } else { ?>
@@ -25,7 +26,8 @@
 <td><input type="text" name="username" id="ls_username" class="px vm xg1" <?php if($_G['setting']['autoidselect']) { ?> value="<?php if(getglobal('setting/uidlogin')) { ?>UID/<?php } ?>用户名/Email" onfocus="if(this.value == '<?php if(getglobal('setting/uidlogin')) { ?>UID/<?php } ?>用户名/Email'){this.value = '';this.className = 'px vm';}" onblur="if(this.value == ''){this.value = '<?php if(getglobal('setting/uidlogin')) { ?>UID/<?php } ?>用户名/Email';this.className = 'px vm xg1';}"<?php } ?> tabindex="901" /></td>
 <?php } ?>
 <td class="fastlg_l"><label for="ls_cookietime"><input type="checkbox" name="cookietime" id="ls_cookietime" class="pc" value="2592000" tabindex="903" />自动登录</label></td>
-<td>&nbsp;<a href="javascript:;" onclick="showWindow('login', 'member.php?mod=logging&action=login&viewlostpw=1')">找回密码</a></td>
+<!-- <td>&nbsp;<a href="javascript:;" onclick="showWindow('login', 'member.php?mod=logging&action=login&viewlostpw=1')">找回密码</a></td> -->
+<td>&nbsp;<a href="member.php?mod=<?php echo $_G['setting']['regname'];?>">找回密码</a></td>
 </tr>
 <tr>
 <td><label for="ls_password"<?php if(!$_G['setting']['autoidselect']) { ?> class="z psw_w"<?php } ?>>密码</label></td>

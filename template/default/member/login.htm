@@ -63,13 +63,14 @@
 							<th>
 								<!--{if $this->setting['autoidselect']}--><label for="username_$loginhash">{lang login_id}:</label><!--{else}-->
 									<span class="login_slct">
-										<select name="loginfield" style="float: left;" width="45" id="loginfield_$loginhash">
+										<select style="display:none" name="loginfield" style="float: left;" width="45" id="loginfield_$loginhash">
 											<option value="username">{lang username}</option>
 											<!--{if getglobal('setting/uidlogin')}-->
 											<option value="uid">{lang uid}</option>
 											<!--{/if}-->
 											<option value="email">{lang email}</option>
 										</select>
+										{lang username}
 									</span>
 								<!--{/if}-->
 							</th>
@@ -83,7 +84,8 @@
 						<tr>
 							<th><label for="password3_$loginhash">{lang login_password}:</label></th>
 							<td><input type="password" id="password3_$loginhash" name="password" onfocus="clearpwd()" size="30" class="px p_fre" tabindex="1" /></td>
-							<td class="tipcol"><a href="javascript:;" onclick="display('layer_login_$loginhash');display('layer_lostpw_$loginhash');" title="{lang getpassword}">{lang getpassword}</a></td>
+							<!-- <td class="tipcol"><a href="javascript:;" onclick="display('layer_login_$loginhash');display('layer_lostpw_$loginhash');" title="{lang getpassword}">{lang getpassword}</a></td> -->
+							<td class="tipcol"><a href="member.php?mod={$_G[setting][regname]}">{lang getpassword}</a></td>
 						</tr>
 					</table>
 				</div>
@@ -227,7 +229,7 @@
 				$('loginform_$loginhash').username.focus();
 			}
 			<!--{if !$this->setting['autoidselect']}-->
-				simulateSelect('loginfield_$loginhash');
+				// simulateSelect('loginfield_$loginhash');
 			<!--{/if}-->
 		<!--{elseif $seccodecheck && !(empty($_GET['auth']) || $questionexist)}-->
 			if($('loginform_$loginhash')) {
