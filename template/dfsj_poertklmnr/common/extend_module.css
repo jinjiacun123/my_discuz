@@ -1,0 +1,16 @@
+/* ----------------------------------
+
+Main CSS file for Discuz! X
+(C) FansBar.cn.
+http://www.fansbar.cn
+Created & Modified by ±±±±¡å.
+
+---------------------------------- */
+
+/** forum::index,forum::forumdisplay,group::index,group::group,search::group **/
+
+.fl_i { width: 88px; text-align: center; }
+.fl_i .xi2, .fl_i .xg1 { font-size: 18px; }
+.fl_icn, .fl_icn_g { width: 36px; }
+
+/** end **/

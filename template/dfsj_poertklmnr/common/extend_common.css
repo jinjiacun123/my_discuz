@@ -1,0 +1,54 @@
+/* ----------------------------------
+
+Main CSS file for Discuz! X
+(C) 巅峰设计.
+http://www.dfbar.net
+Created & Modified by 北北″.
+
+---------------------------------- */
+
+#toptb a { color: #DADADA; }
+#hd { margin-top: 15px; }
+#hd h2 { padding: 10px 20px 8px 0; }
+#hd .wp { width: 1000px; padding: 0; }
+.hdc { min-height: 90px; }
+				.ie6 .hdc { height: 90px; }
+#hd .fastlg a.xi2{color: #db9026 !important;}
+#hd .fastlg, #hd .fastlg a { color: {HEADERTEXT} !important; }
+#toptb { background: #202326; border-bottom: 1px solid #202326; }
+
+#um { float: right; background: #202326; margin-top: 15px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; padding: 10px 80px 10px 10px; }
+#um .avt { margin-right: -70px; }
+#scbar { margin: 15px 0; }
+.bm_h { -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;margin-top: 8px; }
+.fl { border-width: 0; }
+.fl .bm_h { height: 32px; line-height: 32px; border-width: 0; }
+.fl .bm_h h2 a, #online .bm_h, #online .bm_h a { color: #784500; font-size: 1.1em; font-weight: normal;}
+#online .bm_h { border: none; height: 32px; line-height: 32px; background: url({STYLEIMGDIR}/ol_bg.png) repeat-x 0 0; }
+
+
+#dfsj_wp { width: 1000px; margin: 0 auto 30px;border-radius: 5px; padding: 5px; }
+#dfsj_wpx { -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; padding: 8px; }
+#dfsj_wpxx { margin-top: 20px; border-radius: 5px; }
+#dfsj_wpxx #wp { background: #fff; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; padding: 5px; }
+#ft { border-top: none; padding: 20px 0; }
+#ft a { color: #778FA3; }
+#ft .pipe { color: #A3A3A3; }
+			#nv { height: 40px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; }
+				#nv li { padding-right: 0; height: 40px; line-height: 40px; background: none; }
+					.ie_all #nv li { line-height: 43px; }
+					.ie6 #nv li { line-height: 40px; }
+					#nv li a { height: 40px; text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5); }
+					#nv li.a { margin-left: 0; }
+						#nv li a:hover { color: #fff; background: url({STYLEIMGDIR}/nv_a.png) repeat-x 0 50%; text-decoration: none; }
+						#nv li.hover a:hover, #nv li.hover a { background: url({STYLEIMGDIR}/nv_a.png) repeat-x 0 50% }
+
+				#mu ul { background: url({IMGDIR}/mu_bg.png) no-repeat 0 100%; line-height: 22px; z-index: 2; font-size: 12px; }
+
+#qmenu { margin: 6px 4px 0; }
+#extcreditmenu.a, #diy-tg_menu a { color: #000; }
+
+#scrolltop { margin-left: 30px; }
+.zc_footer{color: #fff; font-size: 13px;text-align: center;}
+.zc_footer p{text-align: center;}
+.zc_footer p.p2{color: #999;}

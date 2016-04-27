@@ -1,0 +1,34 @@
+/*
+[name]ºìÉ«[/name]
+[iconbgcolor]#9A2226[/iconbgcolor]
+Powered by Discuz! +
+*/
+
+body { background: #c1cfd6 url(bd_bg.png) 50% 0 repeat-x; }
+#nv { background-image: url(nv.png); }
+	#nv li a:hover, #nv li.hover a, #nv li.hover a:hover { background-image: url(nv_a.png) !important; }
+	#nv li.a { background-image: url(nv_a.png); }
+
+.fl .bm_h { background: url(titlebg.png) repeat-x 0 0; }
+#online .bm_h { background: url(ol_bg.png) repeat-x 0 0; }
+
+#dfsj_wp { background: #1d375b;  }
+#dfsj_wpx { background: #2b4871; border: 1px solid #315384; }
+#dfsj_wpxx { background: #6380a4; }
+#um { background: #405a7f; }
+
+.pgs #newspecial, .pgs #newspecialtmp { float: left; background: url(pn_post.png) no-repeat 0 0; }
+#post_reply, #post_replytmp { float: left; background: url(pn_reply.png) no-repeat 0 0; }
+	#newspecial img, #newspecialtmp img, #post_reply img, #post_replytmp img { opacity: 0; filter: alpha(opacity=0); }
+.moodfm_btn { background-image: url(mood_input_btn.png) !important; }
+#create_group_btn { display: block; background: url(create_group.png) no-repeat 0 0; }
+	#create_group_btn img { opacity: 0; filter: alpha(opacity=0); }
+.el .ec .hot { background-image: url(hotspot.gif); }
+.pll .s { background-image:url(polljoins.gif); }
+
+.bdl, .bdl dt, .bdl dd.bdl_a a { border-color: #FCC; background-color: #FFF9F9; }
+	.bdl dt { background-image: url(titlebg_sd.png); }
+.bdl dd.bdl_a a { color: #BA350F; }
+
+.pn, .tb .o, .tb .o a { background-image: url(pn.png); }
+.pnc, a.pnc, .tb .o { border-color: #900; }

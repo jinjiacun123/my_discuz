@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Addon MD5]]></item>
+	<item id="ID"><![CDATA[showipnew.plugin]]></item>
+	<item id="RevisionID"><![CDATA[51782]]></item>
+	<item id="SN"><![CDATA[2016042211U57GXSxydP]]></item>
+	<item id="RevisionDateline"><![CDATA[1435554012]]></item>
+	<item id="Data">
+		<item id="/app.inc.php"><![CDATA[718e5711b5efce3cdb716b02072baeb2]]></item>
+		<item id="/discuz_plugin_showipnew_SC_GBK.xml"><![CDATA[a1e8e90d08f885b8a01669e2fe6cf015]]></item>
+		<item id="/discuz_plugin_showipnew_SC_UTF8.xml"><![CDATA[53e722c06fb7c4720845a5c9d6f247dd]]></item>
+		<item id="/discuz_plugin_showipnew_TC_BIG5.xml"><![CDATA[0f25eb4fb822ffde74ea2b2b11b7d251]]></item>
+		<item id="/discuz_plugin_showipnew_TC_UTF8.xml"><![CDATA[f5cbfafa5bfb7aaf5654fe73d46d755b]]></item>
+		<item id="/index.htm"><![CDATA[d41d8cd98f00b204e9800998ecf8427e]]></item>
+		<item id="/showipnew.class.php"><![CDATA[8c78758a553877d58c5947df39390049]]></item>
+	</item>
+</root>
