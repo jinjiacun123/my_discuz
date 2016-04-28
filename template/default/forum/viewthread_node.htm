@@ -244,7 +244,7 @@ $postshowavatars = !($_G['setting']['bannedmessages'] & 2 && ($post['memberstatu
 				<!--{if $post['first']}-->
 				<span class="pipe show">|</span><a href="javascript:;" onclick="readmode($('thread_subject').innerHTML, $post[pid]);" class="show">{lang read_mode}</a>
 				<!--{/if}-->
-				<span class="pipe">|</span><a href="forum.php?mod=topicadmin&action=getip&fid=$_G[fid]&tid=$_G[tid]&pid=$post[pid]{if $_G['forum_auditstatuson']}&modthreadkey=$_GET[modthreadkey]{/if}" onclick="ajaxmenu(this, 0, 0, 2);doane(event)">IP</a>
+				<span class="pipe">|</span><span>IP:$post[useip]</span>
 				<!--{hook/viewthread_postheader $postcount}-->
 				</div>
 			</div>

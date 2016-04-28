@@ -52,5 +52,6 @@ Created & Modified by ±±±±¡å.
 .zc_footer{color: #fff; font-size: 13px;text-align: center;}
 .zc_footer p{text-align: center;}
 .zc_footer p.p2{color: #999;}
-.pls .favatar dt{padding-left:5px;text-align: right;}
-.pls .favatar dd{margin-left:5px; }
+.pls .favatar dt{padding-left:3px;text-align: right;}
+.pls .favatar dd{margin-left:3px; }
+dl.cl dt,dl.cl dd{padding: 0 !important;margin: 0 !important;}
