@@ -34,7 +34,7 @@
 <!--{else}-->
 	<!--{if !empty($srchtype)}--><input type="hidden" name="srchtype" value="$srchtype" /><!--{/if}-->
 	<!--{if $srchtype != 'threadsort'}-->
-		<div class="hm mtw ptw pbw"><h1 class="mtw ptw"><a href="./" title="$_G['setting']['bbname']"><img src="{IMGDIR}/logo_sc.png" alt="$_G['setting']['bbname']" /></a></a></h1></div>
+		<div class="hm mtw ptw pbw"><h1 class="mtw ptw"><a href="./" title="$_G['setting']['bbname']"><img src="{IMGDIR}/logo_sc_s.png" alt="$_G['setting']['bbname']" /></a></a></h1></div>
 		<table id="scform" cellspacing="0" cellpadding="0" style="margin: 0 auto;">
 			<tr>
 				<td id="scform_tb" class="xs2">
@@ -53,7 +53,7 @@
 					<!--{if helper_access::check_module('group') && $_G['setting']['search']['group']['status'] && ($_G['group']['allowsearch'] & 16 || $_G['adminid'] == 1)}--><!--{block slist[group]}--><a href="search.php?mod=group{if $keyword}&srchtxt=$keywordenc&searchsubmit=yes{/if}"{if CURMODULE == 'group'} class="a"{/if}>$_G['setting']['navs'][3]['navname']</a><!--{/block}--><!--{/if}-->
 					<!--{if helper_access::check_module('collection') && $_G['setting']['search']['collection']['status'] && ($_G['group']['allowsearch'] & 64 || $_G['adminid'] == 1)}--><!--{block slist[collection]}--><a href="search.php?mod=collection{if $keyword}&srchtxt=$keywordenc&searchsubmit=yes{/if}"{if CURMODULE == 'collection'} class="a"{/if}>{lang collection}</a><!--{/block}--><!--{/if}-->
 					<!--{echo implode("", $slist);}-->
-					<a href="search.php?mod=user{if $keyword}&srchtxt=$keywordenc&searchsubmit=yes{/if}"{if CURMODULE == 'user'} class="a"{/if}>{lang user}</a>
+					<!-- <a href="search.php?mod=user{if $keyword}&srchtxt=$keywordenc&searchsubmit=yes{/if}"{if CURMODULE == 'user'} class="a"{/if}>{lang user}</a> -->
 				</td>
 			</tr>
 			<tr>
