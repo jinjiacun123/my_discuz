@@ -12,7 +12,7 @@ define('UC_DBTABLEPRE', '`ultrax`.pre_ucenter_');
 define('UC_DBCONNECT', 0);
 
 define('UC_CHARSET', 'utf-8');
-define('UC_KEY', 'o2o4W6A7H4zfC8H3YdUbcdK3e6HeY2BeieRaH5HaX1l7Ie49K6md59C8Z2Jaf0te');
+define('UC_KEY', 'U7K1w9deP1t4G0l4P4hb223cW4x14cncVfZbx1i7RfQ1VaZd45CcdbXfA0jff7h3');
 define('UC_API', 'http://192.168.1.131/ds/uc_server');
 define('UC_APPID', '1');
 define('UC_IP', '');

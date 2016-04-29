@@ -63,7 +63,7 @@
 							<p class="d" id="chk_newpassword2">{lang memcp_profile_passwd_comment}</p>
 						</td>
 					</tr>
-					<tr id="contact"{if $_GET[from] == 'contact'} style="background-color: {$_G['style']['specialbg']};"{/if}>
+					<tr style="display:none" id="contact"{if $_GET[from] == 'contact'} style="background-color: {$_G['style']['specialbg']};"{/if}>
 						<th>{lang email}</th>
 						<td>
 							<input type="text" name="emailnew" id="emailnew" value="$space[email]" class="px" />
@@ -79,7 +79,7 @@
 					</tr>
 
 					<!--{if $_G['member']['freeze'] == 2}-->
-					<tr>
+					<tr style="display:none">
 						<th>{lang freeze_reason}</th>
 						<td>
 							<textarea rows="3" cols="80" name="freezereson" class="pt">$space[freezereson]</textarea>
@@ -88,7 +88,7 @@
 					</tr>
 					<!--{/if}-->
 
-					<tr>
+					<tr style="display:none">
 						<th>{lang security_question}</th>
 						<td>
 							<select name="questionidnew" id="questionidnew">
@@ -106,7 +106,7 @@
 						</td>
 					</tr>
 
-					<tr>
+					<tr style="display:none">
 						<th>{lang security_answer}</th>
 						<td>
 							<input type="text" name="answernew" id="answernew" class="px" />
@@ -161,7 +161,7 @@
 						<td id="td_$key">
 							$htmls[$key]
 						</td>
-						<td class="p">
+						<td class="p" style="display:none">
 							<!--{if $vid}-->
 							<input type="hidden" name="privacy[$key]" value="3" />
 							<!--{else}-->
@@ -247,7 +247,7 @@
 					<th>&nbsp;</th>
 					<td colspan="2">
 						<input type="hidden" name="profilesubmit" value="true" />
-						<button type="submit" name="profilesubmitbtn" id="profilesubmitbtn" value="true" class="pn pnc" /><strong>{lang save}</strong></button>
+						<!-- <button type="submit" name="profilesubmitbtn" id="profilesubmitbtn" value="true" class="pn pnc" /><strong>{lang save}</strong></button> -->
 						<span id="submit_result" class="rq"></span>
 					</td>
 				</tr>

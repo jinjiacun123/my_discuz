@@ -27,10 +27,9 @@
 		<!--{hook/global_usernav_extra2}-->
 		<span class="pipe">|</span><a href="member.php?mod=logging&action=logout&formhash={FORMHASH}">{lang logout}</a>
 	</p>
-	<p>
+	<p style="text-align: left">
 		<!--{hook/global_usernav_extra3}-->
-		<a href="home.php?mod=spacecp&ac=credit&showcredit=1" id="extcreditmenu"{if !$_G[setting][bbclosed]} onmouseover="delayShow(this, showCreditmenu);" class="showmenu"{/if}>{lang credits}: $_G[member][credits]</a>
-		<span class="pipe">|</span><a href="home.php?mod=spacecp&ac=usergroup" id="g_upmine" class="showmenu" onmouseover="delayShow(this, showUpgradeinfo)">{lang usergroup}: $_G[group][grouptitle]<!--{if $_G[member]['freeze']}--><span class="xi1">({lang freeze})</span><!--{/if}--></a>
+		<a id="g_upmine" class="showmenu" onmouseover="delayShow(this, showUpgradeinfo)">{lang usergroup}: $_G[group][grouptitle]<!--{if $_G[member]['freeze']}--><span class="xi1">({lang freeze})</span><!--{/if}--></a>
 	</p>
 </div>
 <!--{elseif !empty($_G['cookie']['loginuser'])}-->

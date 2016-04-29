@@ -22,7 +22,8 @@ function profile_node_groupicon($post, $s, $e) {
 function profile_node_authortitle($post, $s, $e) {
 -->
 <!--{/eval}-->
-<!--{block return}-->$s<a href="home.php?mod=spacecp&ac=usergroup&gid=$post[groupid]" target="_blank">{$post[authortitle]}</a>$e<!--{/block}-->
+<!--{block return}-->$s<span>{$post[authortitle]}</span>$e
+<!-- $s<a href="home.php?mod=spacecp&ac=usergroup&gid=$post[groupid]" target="_blank">{$post[authortitle]}</a>$e --><!--{/block}-->
 <!--{eval}-->
 <!--
 	return $return;

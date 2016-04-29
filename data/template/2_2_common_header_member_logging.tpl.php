@@ -1,8 +1,8 @@
 <?php if(!defined('IN_DISCUZ')) exit('Access Denied'); 
 0
-|| checktplrefresh('./template/dfsj_poertklmnr/common/header.htm', './template/dfsj_poertklmnr/common/header_common.htm', 1461754895, '2', './data/template/2_2_common_header_member_logging.tpl.php', './template/dfsj_poertklmnr', 'common/header_member_logging')
-|| checktplrefresh('./template/dfsj_poertklmnr/common/header.htm', './template/default/common/header_qmenu.htm', 1461754895, '2', './data/template/2_2_common_header_member_logging.tpl.php', './template/dfsj_poertklmnr', 'common/header_member_logging')
-|| checktplrefresh('./template/dfsj_poertklmnr/common/header.htm', './template/default/common/pubsearchform.htm', 1461754895, '2', './data/template/2_2_common_header_member_logging.tpl.php', './template/dfsj_poertklmnr', 'common/header_member_logging')
+|| checktplrefresh('./template/dfsj_poertklmnr/common/header.htm', './template/dfsj_poertklmnr/common/header_common.htm', 1461844935, '2', './data/template/2_2_common_header_member_logging.tpl.php', './template/dfsj_poertklmnr', 'common/header_member_logging')
+|| checktplrefresh('./template/dfsj_poertklmnr/common/header.htm', './template/default/common/header_qmenu.htm', 1461844935, '2', './data/template/2_2_common_header_member_logging.tpl.php', './template/dfsj_poertklmnr', 'common/header_member_logging')
+|| checktplrefresh('./template/dfsj_poertklmnr/common/header.htm', './template/default/common/pubsearchform.htm', 1461844935, '2', './data/template/2_2_common_header_member_logging.tpl.php', './template/dfsj_poertklmnr', 'common/header_member_logging')
 ;?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -180,7 +180,7 @@ EOF;
 <tr>
 <td class="scbar_icon_td"></td>
 <td class="scbar_txt_td"><input type="text" name="srchtxt" id="scbar_txt" value="请输入搜索内容" autocomplete="off" x-webkit-speech speech /></td>
-<td class="scbar_type_td"><a href="javascript:;" id="scbar_type" class="xg1" onclick="showMenu(this.id)" hidefocus="true">搜索</a></td>
+<td style="display:none" class="scbar_type_td"><a href="javascript:;" id="scbar_type" class="xg1" onclick="showMenu(this.id)" hidefocus="true">搜索</a></td>
 <td class="scbar_btn_td"><button type="submit" name="searchsubmit" id="scbar_btn" sc="1" class="pn pnc" value="true"><strong class="xi2">搜索</strong></button></td>
 <td class="scbar_hot_td">
 <div id="scbar_hot">
