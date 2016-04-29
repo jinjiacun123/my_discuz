@@ -1,8 +1,8 @@
 <?php if(!defined('IN_DISCUZ')) exit('Access Denied'); 
 0
-|| checktplrefresh('./template/dfsj_poertklmnr/common/header.htm', './template/dfsj_poertklmnr/common/header_common.htm', 1461842013, '2', './data/template/2_2_common_header_forum_index.tpl.php', './template/dfsj_poertklmnr', 'common/header_forum_index')
-|| checktplrefresh('./template/dfsj_poertklmnr/common/header.htm', './template/default/common/header_qmenu.htm', 1461842013, '2', './data/template/2_2_common_header_forum_index.tpl.php', './template/dfsj_poertklmnr', 'common/header_forum_index')
-|| checktplrefresh('./template/dfsj_poertklmnr/common/header.htm', './template/default/common/pubsearchform.htm', 1461842013, '2', './data/template/2_2_common_header_forum_index.tpl.php', './template/dfsj_poertklmnr', 'common/header_forum_index')
+|| checktplrefresh('./template/dfsj_poertklmnr/common/header.htm', './template/dfsj_poertklmnr/common/header_common.htm', 1461927798, '2', './data/template/2_2_common_header_forum_index.tpl.php', './template/dfsj_poertklmnr', 'common/header_forum_index')
+|| checktplrefresh('./template/dfsj_poertklmnr/common/header.htm', './template/default/common/header_qmenu.htm', 1461927798, '2', './data/template/2_2_common_header_forum_index.tpl.php', './template/dfsj_poertklmnr', 'common/header_forum_index')
+|| checktplrefresh('./template/dfsj_poertklmnr/common/header.htm', './template/default/common/pubsearchform.htm', 1461927798, '2', './data/template/2_2_common_header_forum_index.tpl.php', './template/dfsj_poertklmnr', 'common/header_forum_index')
 ;?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -81,7 +81,7 @@
 <ul id="myprompt_menu" class="p_pop" style="display: none;">
 <li><a href="home.php?mod=space&amp;do=pm" id="pm_ntc" style="background-repeat: no-repeat; background-position: 0 50%;"><em class="prompt_news<?php if(empty($_G['member']['newpm'])) { ?>_0<?php } ?>"></em>消息</a></li>
 
-<li><a href="home.php?mod=follow&amp;do=follower"><em class="prompt_follower<?php if(empty($_G['member']['newprompt_num']['follower'])) { ?>_0<?php } ?>"></em>新听众<?php if($_G['member']['newprompt_num']['follower']) { ?>(<?php echo $_G['member']['newprompt_num']['follower'];?>)<?php } ?></a></li>
+<li style="display:none;"><a href="home.php?mod=follow&amp;do=follower"><em class="prompt_follower<?php if(empty($_G['member']['newprompt_num']['follower'])) { ?>_0<?php } ?>"></em>新听众<?php if($_G['member']['newprompt_num']['follower']) { ?>(<?php echo $_G['member']['newprompt_num']['follower'];?>)<?php } ?></a></li>
 
 <?php if($_G['member']['newprompt'] && $_G['member']['newprompt_num']['follow']) { ?>
 <li><a href="home.php?mod=follow"><em class="prompt_concern"></em>我关注的(<?php echo $_G['member']['newprompt_num']['follow'];?>)</a></li>

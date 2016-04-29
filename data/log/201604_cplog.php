@@ -1779,3 +1779,4 @@
 <?PHP exit;?>	1461926606	admin	1	192.168.1.42	setting	GET={operation=basic; }; POST={};
 <?PHP exit;?>	1461926606	admin	1	192.168.1.42	setting	GET={operation=basic; }; POST={};
 <?PHP exit;?>	1461926606	admin	1	192.168.1.42	setting	GET={operation=basic; }; POST={};
+<?PHP exit;?>	1461927034	admin	1	192.168.1.42	index	GET={}; POST={};
