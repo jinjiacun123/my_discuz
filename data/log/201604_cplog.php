@@ -1780,3 +1780,8 @@
 <?PHP exit;?>	1461926606	admin	1	192.168.1.42	setting	GET={operation=basic; }; POST={};
 <?PHP exit;?>	1461926606	admin	1	192.168.1.42	setting	GET={operation=basic; }; POST={};
 <?PHP exit;?>	1461927034	admin	1	192.168.1.42	index	GET={}; POST={};
+<?PHP exit;?>	1461930217	admin	1	192.168.1.41		GET={}; POST={};
+<?PHP exit;?>	1461930220	admin	1	192.168.1.41	index	GET={}; POST={};
+<?PHP exit;?>	1461930222	admin	1	192.168.1.41	tools	GET={operation=updatecache; }; POST={};
+<?PHP exit;?>	1461930225	admin	1	192.168.1.41	tools	GET={operation=updatecache; step=2; type={0=data; 1=tpl; }; confirmed=确定; }; POST={type={0=data; 1=tpl; }; confirmed=确定; };
+<?PHP exit;?>	1461930227	admin	1	192.168.1.41	tools	GET={operation=updatecache; step=3; type=data_tpl; }; POST={};
