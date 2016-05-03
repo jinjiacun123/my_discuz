@@ -95,6 +95,32 @@ class table_common_member_profile extends discuz_table_archive
 		}
 		return $birthlist;
 	}
+
+
+	public function insert($uid, $realname, $gender, $birthyear, $birthmonth, $birthday, $field1) {
+		if(($uid = dintval($uid))) {
+			$credits = isset($extdata['credits']) ? $extdata['credits'] : array();
+			$profile = isset($extdata['profile']) ? $extdata['profile'] : array();
+			$profile['uid'] = $uid;
+			$base = array(
+				'uid' => $uid,
+				'realname' => (string)$realname,
+				'gender' => (string)$gender,
+				'birthyear' => (string)$birthyear,
+				'birthmonth' => intval($birthmonth),
+				'birthday' => intval($birthday),
+				'field1' => (string)$field1,
+			);
+			$ext = array('uid' => $uid);
+			parent::insert($base, false, true);
+			// C::t('common_member_status')->insert($status, false, true);
+			// C::t('common_member_count')->insert($count, false, true);
+			//C::t('common_member_profile')->insert($profile, false, true);
+			// C::t('common_member_field_forum')->insert($ext, false, true);
+			// C::t('common_member_field_home')->insert($ext, false, true);
+			//manyoulog('user', $uid, 'add');
+		}
+	}
 }
 
 ?>

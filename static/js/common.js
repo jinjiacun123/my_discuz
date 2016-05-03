@@ -1913,7 +1913,35 @@ function toggleBlind(dom) {
 		}
 	}
 }
-
+//年月日
+function showbirthday(){
+	var el = $('birthday');
+	var birthday = el.value;
+	el.length=0;
+	el.options.add(new Option('日', ''));
+	for(var i=0;i<28;i++){
+		el.options.add(new Option(i+1, i+1));
+	}
+	if($('birthmonth').value!="2"){
+		el.options.add(new Option(29, 29));
+		el.options.add(new Option(30, 30));
+		switch($('birthmonth').value){
+			case "1":
+			case "3":
+			case "5":
+			case "7":
+			case "8":
+			case "10":
+			case "12":{
+				el.options.add(new Option(31, 31));
+			}
+		}
+	} else if($('birthyear').value!="") {
+		var nbirthyear=$('birthyear').value;
+		if(nbirthyear%400==0 || (nbirthyear%4==0 && nbirthyear%100!=0)) el.options.add(new Option(29, 29));
+	}
+	el.value = birthday;
+}
 function checkBlind() {
 	var dom = $('switchblind');
 	if(dom) {

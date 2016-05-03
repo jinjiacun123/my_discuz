@@ -13,7 +13,7 @@ function profile_node_numbercard($post, $s, $e) {
 function profile_node_groupicon($post, $s, $e) {
 -->
 <!--{/eval}-->
-<!--{block return}--><!--{if $post[groupicon]}-->$s<a href="home.php?mod=spacecp&ac=usergroup&gid=$post[groupid]" target="_blank">$post[groupicon]</a>$e<!--{/if}--><!--{/block}-->
+<!--{block return}--><!--{if $post[groupicon]}-->$s<a style="display:none" href="home.php?mod=spacecp&ac=usergroup&gid=$post[groupid]" target="_blank">$post[groupicon]</a>$e<!--{/if}--><!--{/block}-->
 <!--{eval}-->
 <!--
 	return $return;

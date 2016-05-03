@@ -657,6 +657,11 @@ function showsetting($setname, $varname, $value, $type = 'radio', $disabled = ''
 			'<li'.($check['true'] ? ' class="checked"' : '').'><input class="radio" type="radio"'.($varnameid ? ' id="_v1_'.$varnameid.'"' : '').' name="'.$varname.'" value="1" '.$check['true'].$check['hidden1'].$check['disabled'].$onclick.'>&nbsp;'.cplang('yes').'</li>'.
 			'<li'.($check['false'] ? ' class="checked"' : '').'><input class="radio" type="radio"'.($varnameid ? ' id="_v0_'.$varnameid.'"' : '').' name="'.$varname.'" value="0" '.$check['false'].$check['hidden0'].$check['disabled'].$onclick.'>&nbsp;'.cplang('no').'</li>'.
 			'</ul>';
+	} elseif($type == 'radio1') {
+		$s .= '<ul onmouseover="altStyle(this'.$check['disabledaltstyle'].');">'.
+			'<li'.($check['true'] ? ' class="checked"' : '').'><input class="radio" type="radio"'.' name="'.$varname.'" value="1" checked="checked">&nbsp;'.'ÄÐ'.'</li>'.
+			'<li'.($check['false'] ? ' class="checked"' : '').'><input class="radio" type="radio"'.' name="'.$varname.'" value="0" >&nbsp;'.'Å®'.'</li>'.
+			'</ul>';
 	} elseif($type == 'text' || $type == 'password' || $type == 'number') {
 		$s .= '<input name="'.$varname.'" value="'.dhtmlspecialchars($value).'" type="'.$type.'" class="txt" '.$check['disabled'].' '.$extra.' />';
 	} elseif($type == 'htmltext') {

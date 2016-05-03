@@ -39,7 +39,10 @@ class table_common_member_profile_setting extends discuz_table
 	public function fetch_all_by_available_required($available, $required) {
 		return DB::fetch_all('SELECT * FROM %t WHERE available=%d AND required=%d', array($this->_table, $available, $required), $this->_pk);
 	}
-
+    //²éÑ¯ËùÊô
+    public function ss_common_member_profile_setting($available){
+    	return DB::fetch_all('SELECT choices FROM %t WHERE fieldid=%s', array($this->_table, $available), $this->_pk);
+    }
 	public function fetch_all_by_available_showinregister($available, $showinregister) {
 		return DB::fetch_all('SELECT * FROM %t WHERE available=%d AND showinregister=%d', array($this->_table, $available, $showinregister), $this->_pk);
 	}

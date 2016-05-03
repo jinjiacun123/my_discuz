@@ -55,3 +55,6 @@ Created & Modified by ±±±±¡å.
 .pls .favatar dt{padding-left:3px;text-align: right;}
 .pls .favatar dd{margin-left:3px; }
 dl.cl dt,dl.cl dd{padding: 0 !important;margin: 0 !important;}
+.avatar span.dengji{left: 377px;margin-top: 88px; position: absolute;z-index: 157;}
+.m span.dengji {left: 70px;margin-top: 84px; position: absolute;z-index: 157;}
+.m span.dengji img,.avatar span.dengji img{padding: 0;width: 88px;background: none;}

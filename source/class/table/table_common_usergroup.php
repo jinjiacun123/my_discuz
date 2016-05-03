@@ -79,7 +79,7 @@ class table_common_usergroup extends discuz_table
 	public function fetch_all_by_not_groupid($gid) {
 		return DB::fetch_all('SELECT groupid, type, grouptitle, creditshigher, radminid FROM %t WHERE type=\'member\' AND creditshigher=\'0\' OR (groupid NOT IN (%n) AND radminid<>\'1\' AND type<>\'member\') ORDER BY (creditshigher<>\'0\' || creditslower<>\'0\'), creditslower, groupid', array($this->_table, $gid), $this->_pk);
 	}
-
+    
 	public function fetch_all_not($gid, $creditnotzero = false) {
 		return DB::fetch_all('SELECT groupid, radminid, type, grouptitle, creditshigher, creditslower FROM %t WHERE groupid NOT IN (%n) ORDER BY '.($creditnotzero ? "(creditshigher<>'0' || creditslower<>'0'), " : '').'creditshigher, groupid', array($this->_table, $gid), $this->_pk);
 	}
@@ -134,6 +134,7 @@ class table_common_usergroup extends discuz_table
 	public function buyusergroup_exists() {
 		return DB::result_first("SELECT COUNT(*) FROM %t WHERE type='special' and system>0", array($this->_table));
 	}
+
 }
 
 ?>

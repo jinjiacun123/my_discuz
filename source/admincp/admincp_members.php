@@ -904,7 +904,59 @@ EOF;
 } elseif($operation == 'add') {
 
 	if(!submitcheck('addsubmit')) {
+		//入职时间
+		$html_rztime = array();
+		$birthyeayhtml = '';
+		$nowy = dgmdate($_G['timestamp'], 'Y');
+		for ($i=0; $i<100; $i++) {
+			$they = $nowy - $i;
+			$selectstr = $they == $space['birthyear']?' selected':'';
+			$birthyeayhtml .= "<option value=\"$they\"$selectstr>$they</option>";
+		}
+		$birthmonthhtml = '';
+		for ($i=1; $i<13; $i++) {
+			$selectstr = $i == $space['birthmonth']?' selected':'';
+			$birthmonthhtml .= "<option value=\"$i\"$selectstr>$i</option>";
+		}
+		$birthdayhtml = '';
+		if(empty($space['birthmonth']) || in_array($space['birthmonth'], array(1, 3, 5, 7, 8, 10, 12))) {
+			$days = 31;
+		} elseif(in_array($space['birthmonth'], array(4, 6, 9, 11))) {
+			$days = 30;
+		} elseif($space['birthyear'] && (($space['birthyear'] % 400 == 0) || ($space['birthyear'] % 4 == 0 && $space['birthyear'] % 400 != 0))) {
+			$days = 29;
+		} else {
+			$days = 28;
+		}
+		for ($i=1; $i<=$days; $i++) {
+			$selectstr = $i == $space['birthday']?' selected':'';
+			$birthdayhtml .= "<option value=\"$i\"$selectstr>$i</option>";
+		}
+		$html_rztime = '<select name="birthyear" id="birthyear" class="ps" onchange="showbirthday();" tabindex="1">'
+				.'<option value="">'.lang('space', 'year').'</option>'
+				.$birthyeayhtml
+				.'</select>'
+				.'&nbsp;&nbsp;'
+				.'<select name="birthmonth" id="birthmonth" class="ps" onchange="showbirthday();" tabindex="1">'
+				.'<option value="">'.lang('space', 'month').'</option>'
+				.$birthmonthhtml
+				.'</select>'
+				.'&nbsp;&nbsp;'
+				.'<select name="birthday" id="birthday" class="ps" tabindex="1">'
+				.'<option value="">'.lang('space', 'day').'</option>'
+				.$birthdayhtml
+				.'</select>';
 
+	    //所属
+	    $ss_select = '';
+	    $ss_query = C::t('common_member_profile_setting')->ss_common_member_profile_setting('field1');
+	    $ss_query_arr = explode("\n", $ss_query[0]['choices']);
+	    $ss_select .= "<option value=\"\">===请选择===</option>\n";
+	    foreach ($ss_query_arr as $value) {
+	    	$ss_select .= "<option value=\"$value\">$value</option>\n";
+	    }
+
+        //用户组
 		$groupselect = array();
 		$query = C::t('common_usergroup')->fetch_all_by_not_groupid(array(5, 6, 7));
 		foreach($query as $group) {
@@ -919,35 +971,48 @@ EOF;
 			($groupselect['special'] ? '<optgroup label="'.$lang['usergroups_special'].'">'.$groupselect['special'].'</optgroup>' : '').
 			($groupselect['specialadmin'] ? '<optgroup label="'.$lang['usergroups_specialadmin'].'">'.$groupselect['specialadmin'].'</optgroup>' : '').
 			'<optgroup label="'.$lang['usergroups_system'].'">'.$groupselect['system'].'</optgroup>';
+		//输出页面
 		shownav('user', 'nav_members_add');
 		showsubmenu('members_add');
 		showformheader('members&operation=add');
 		showtableheader();
 		showsetting('username', 'newusername', '', 'text');
 		showsetting('password', 'newpassword', '', 'text');
-		showsetting('email', 'newemail', '', 'text');
+		//showsetting('email', 'newemail', '', 'text');
+		showsetting('sex', 'gender', '', 'radio1');
+		showsetting('entry_time', '', '', $html_rztime);
+		showsetting('subordinate_position', '', '', '<select name="newsubordinate">'.$ss_select.'</select>');
 		showsetting('usergroup', '', '', '<select name="newgroupid">'.$groupselect.'</select>');
-		showsetting('members_add_email_notify', 'emailnotify', '', 'radio');
+		//showsetting('members_add_email_notify', 'emailnotify', '', 'radio');
 		showsubmit('addsubmit');
 		showtablefooter();
 		showformfooter();
 
 	} else {
-
 		$newusername = trim($_GET['newusername']);
 		$newpassword = trim($_GET['newpassword']);
-		$newemail = strtolower(trim($_GET['newemail']));
+		$gender      = trim($_GET['gender']);
+		$birthyear      = trim($_GET['birthyear']);
+		$birthmonth      = trim($_GET['birthmonth']);
+		$birthday      = trim($_GET['birthday']);
+		$newsubordinate      = trim($_GET['newsubordinate']);
+		//$newemail = strtolower(trim($_GET['newemail']));
 
-		if(!$newusername || !isset($_GET['confirmed']) && !$newpassword || !isset($_GET['confirmed']) && !$newemail) {
+		if(!$newusername || !isset($_GET['confirmed']) && !$newpassword || !$birthyear || !$birthmonth || !$birthday || !$newsubordinate) {
 			cpmsg('members_add_invalid', '', 'error');
 		}
-
 		if(C::t('common_member')->fetch_uid_by_username($newusername) || C::t('common_member_archive')->fetch_uid_by_username($newusername)) {
 			cpmsg('members_add_username_duplicate', '', 'error');
 		}
-
+        if(!eregi("[^\x80-\xff]","$newusername")){
+		    if(strlen($newusername)>6 && strlen($newusername)>12){
+                cpmsg('members_add_username_duplicate_xm_ex', '', 'error');
+		    }
+		}else{
+			cpmsg('members_add_username_duplicate_xm', '', 'error');
+		}
 		loaducenter();
-
+        $newemail = "1111@qq.com";
 		$uid = uc_user_register(addslashes($newusername), $newpassword, $newemail);
 		if($uid <= 0) {
 			if($uid == -1) {
@@ -999,7 +1064,7 @@ EOF;
 				runlog('sendmail', "$newemail sendmail failed.");
 			}
 		}
-
+        C::t('common_member_profile')->insert($uid, $newusername, $gender, $birthyear, $birthmonth, $birthday, $newsubordinate);
 		updatecache('setting');
 		cpmsg('members_add_succeed', '', 'succeed', array('username' => $newusername, 'uid' => $uid));
 
