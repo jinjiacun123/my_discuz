@@ -1,6 +1,6 @@
 <div class="rwd cl">
 	<div class="{if $_G['forum_thread']['price'] > 0}rusld{elseif $_G['forum_thread']['price'] < 0}rsld{/if} z">
-		<cite>$rewardprice</cite>{$_G['setting']['extcredits'][$_G['setting']['creditstransextra'][2]][title]}
+		<cite style="display:none;">$rewardprice{$_G['setting']['extcredits'][$_G['setting']['creditstransextra'][2]][title]}</cite>
 	</div>
 	<div class="rwdn">
 		<table cellspacing="0" cellpadding="0"><tr><td class="t_f" id="postmessage_$post[pid]">$post[message]</td></tr></table>

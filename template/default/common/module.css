@@ -840,7 +840,7 @@ a.thread_mod { background: url({IMGDIR}/bigimg.png) no-repeat 0 -38px; padding-l
 		.plc { padding: 0 20px; }
 		.pls { width: 160px; background: {SPECIALBG}; overflow: hidden; border-right: 1px solid {CONTENTSEPARATE}; }
 		.pls .avatar { margin: 10px 15px; }
-			.pls .avatar img { padding: 5px 5px 8px; background: #FFF url({IMGDIR}/midavt_shadow.gif) 0 100% repeat-x; width:120px; }
+			.pls .avatar img { padding: 5px 5px 8px; background: #FFF url({IMGDIR}/midavt_shadow.gif) 0 100% repeat-x; width:120px; height: 120px; }
 
 			.pls .favatar { background: transparent; height: auto; border-width: 0px; overflow: visible; }
 
@@ -1008,7 +1008,7 @@ i.pstatus { display: block; margin-bottom: -30px; font-size: 12px; text-align: c
 		.bui dl { margin: 5px 0 10px; }
 			.bui dt { width: 4.5em; }
 			.bui dd { margin-right: 10px; width: 75px; }
-		.bui .m img { margin-bottom: 12px; width: 120px; }
+		.bui .m img { margin-bottom: 12px; width: 120px; height: 120px; }
 		.bui .i { width: 290px; }
 			.imicn img { vertical-align: middle; margin-right: 8px; }
 				.imicn .xi2:hover { text-decoration: none; }
@@ -1138,8 +1138,8 @@ i.pstatus { display: block; margin-bottom: -30px; font-size: 12px; text-align: c
 
 /* 悬赏 by dfox */
 	.rwd {}
-		.rsld, .rusld { width: 90px; height: 118px; background: url({IMGDIR}/rwd.gif) no-repeat 0 0; text-align: center; color: #F30; }
-		.rsld { background-position: 0 -118px; color: {LIGHTTEXT}; }
+		.rsld, .rusld { width: 90px; height: 24px; background: url({IMGDIR}/sb.png) no-repeat 0 0; text-align: center; color: #F30; }
+		.rsld { /*background-position: 0 -118px;*/ color: {LIGHTTEXT}; }
 			.rsld cite, .rusld cite { display: block; margin: 26px auto 6px; _margin-bottom: -6px; height: 30px; font-size: 28px; }
 		.rwdn { margin-left: 110px; }
 	.rwdbst {}

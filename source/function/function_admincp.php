@@ -659,11 +659,14 @@ function showsetting($setname, $varname, $value, $type = 'radio', $disabled = ''
 			'</ul>';
 	} elseif($type == 'radio1') {
 		$s .= '<ul onmouseover="altStyle(this'.$check['disabledaltstyle'].');">'.
-			'<li'.($check['true'] ? ' class="checked"' : '').'><input class="radio" type="radio"'.' name="'.$varname.'" value="1" checked="checked">&nbsp;'.'ÄÐ'.'</li>'.
-			'<li'.($check['false'] ? ' class="checked"' : '').'><input class="radio" type="radio"'.' name="'.$varname.'" value="0" >&nbsp;'.'Å®'.'</li>'.
+			'<li'.($check['true'] ? ' class="checked"' : '').'><input class="radio" type="radio"'.' name="'.$varname.'" value="1" checked="checked">&nbsp;'.cplang('nanren').'</li>'.
+			'<li'.($check['false'] ? ' class="checked"' : '').'><input class="radio" type="radio"'.' name="'.$varname.'" value="0" >&nbsp;'.cplang('nvren').'</li>'.
 			'</ul>';
 	} elseif($type == 'text' || $type == 'password' || $type == 'number') {
 		$s .= '<input name="'.$varname.'" value="'.dhtmlspecialchars($value).'" type="'.$type.'" class="txt" '.$check['disabled'].' '.$extra.' />';
+		if($varname == "newusername"){
+           $s .= '<br><span style="color:red">'.cplang("username_ts").'</span>';
+		}
 	} elseif($type == 'htmltext') {
 		$id .= 'html'.random(2);
 		$s .= '<div id="'.$id.'">'.$value.'</div><input id="'.$id.'_v" name="'.$varname.'" value="'.dhtmlspecialchars($value).'" type="hidden" /><script type="text/javascript">sethtml(\''.$id.'\')</script>';

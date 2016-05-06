@@ -138,7 +138,8 @@ class model_forum_post extends discuz_model {
 			'attachment' => '0',
 			'status' => $status,
 		));
-
+        //获取用户组的权限
+        $adminid = $this->member['adminid'];
 		//更新主题
 		//var_dump(C::t('forum_thread')->query("update pre_forum_thread set price=-1 where tid=2"));
 		//判定是否是版主
@@ -146,7 +147,7 @@ class model_forum_post extends discuz_model {
 		//$this->member['uid']
 		$is_webmaster = C::t('forum_moderator')->fetch_uid_by_fid_uid($this->forum['fid'],$this->member['uid']);
 		//file_put_contents("/opt/jim1.txt", $is_webmaster);
-		if($is_webmaster>0)
+		if($is_webmaster>0 || $adminid == 1 || $adminid == 2)
 		{
 			C::t('forum_thread')->update_resolve($this->thread['tid']);
 		}

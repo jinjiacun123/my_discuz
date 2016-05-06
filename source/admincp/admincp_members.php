@@ -904,7 +904,7 @@ EOF;
 } elseif($operation == 'add') {
 
 	if(!submitcheck('addsubmit')) {
-		//»Î÷∞ ±º‰
+		//ÂÖ•ËÅåÊó∂Èó¥
 		$html_rztime = array();
 		$birthyeayhtml = '';
 		$nowy = dgmdate($_G['timestamp'], 'Y');
@@ -947,16 +947,16 @@ EOF;
 				.$birthdayhtml
 				.'</select>';
 
-	    //À˘ Ù
+	    //ÊâÄÂ±û
 	    $ss_select = '';
 	    $ss_query = C::t('common_member_profile_setting')->ss_common_member_profile_setting('field1');
 	    $ss_query_arr = explode("\n", $ss_query[0]['choices']);
-	    $ss_select .= "<option value=\"\">===«Î—°‘Ò===</option>\n";
+	    $ss_select .= "<option value=\"\">".$lang['qingxuanze']."</option>\n";
 	    foreach ($ss_query_arr as $value) {
 	    	$ss_select .= "<option value=\"$value\">$value</option>\n";
 	    }
 
-        //”√ªß◊È
+        //Áî®Êà∑ÁªÑ
 		$groupselect = array();
 		$query = C::t('common_usergroup')->fetch_all_by_not_groupid(array(5, 6, 7));
 		foreach($query as $group) {
@@ -971,7 +971,7 @@ EOF;
 			($groupselect['special'] ? '<optgroup label="'.$lang['usergroups_special'].'">'.$groupselect['special'].'</optgroup>' : '').
 			($groupselect['specialadmin'] ? '<optgroup label="'.$lang['usergroups_specialadmin'].'">'.$groupselect['specialadmin'].'</optgroup>' : '').
 			'<optgroup label="'.$lang['usergroups_system'].'">'.$groupselect['system'].'</optgroup>';
-		// ‰≥ˆ“≥√Ê
+		//ËæìÂá∫È°µÈù¢
 		shownav('user', 'nav_members_add');
 		showsubmenu('members_add');
 		showformheader('members&operation=add');
@@ -1012,7 +1012,7 @@ EOF;
 			cpmsg('members_add_username_duplicate_xm', '', 'error');
 		}
 		loaducenter();
-        $newemail = "1111@qq.com";
+        //$newemail = "1111@qq.com";
 		$uid = uc_user_register(addslashes($newusername), $newpassword, $newemail);
 		if($uid <= 0) {
 			if($uid == -1) {
