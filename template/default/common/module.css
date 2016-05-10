@@ -576,7 +576,7 @@ Created & Modified by Alice, Monkey, Lushnis, Pony, Dfox & DragonLee.
 		.ttp li { float: left; padding-bottom: 5px; }
 		.ttp a, .ttp strong { float: left; margin-right: 5px; padding: 4px 8px 3px; height: 18px; border: 1px solid {COMMONBORDER}; background: {WRAPBG}; white-space: nowrap; }
 			.ttp a:hover { border-color: {HIGHLIGHTLINK}; color: {HIGHLIGHTLINK}; text-decoration: none; }
-		.ttp .a a { padding-right: 12px;  padding-left: 12px; border-color: {HIGHLIGHTLINK}; background: {SPECIALBG}; color: {HIGHLIGHTLINK}; }
+		.ttp .a a { padding-right: 12px;  padding-left: 12px; border-color: #ff6600; background: #ff6600; color: #fff; }
 		.ttp .pipe { float: left; margin-right: 10px; padding: 0; width: 2px; height: 27px; background: {SPECIALBORDER}; text-indent: -9999px; }
 	/* 版块有大量主题分类时的展开收起样式 by Pony */
 	.cttp { overflow: hidden; padding-right: 35px; height: 32px; }
@@ -670,8 +670,8 @@ Created & Modified by Alice, Monkey, Lushnis, Pony, Dfox & DragonLee.
 	Author:			lushnis
 	Last Modify:	Pony
 */
-	.ttp .a a:hover { background: {SPECIALBG} url({IMGDIR}/close-s.png) no-repeat 100% 11px; }
-	#ttp_all a:hover { background-image: none !important; }
+	/*.ttp .a a:hover { background: {SPECIALBG} url({IMGDIR}/close-s.png) no-repeat 100% 11px; }*/
+	/*#ttp_all a:hover { background: #ff6600 none repeat scroll 0 0 !important; }*/
 /** end **/
 
 
@@ -846,9 +846,9 @@ a.thread_mod { background: url({IMGDIR}/bigimg.png) no-repeat 0 -38px; padding-l
 
 		.pls p, .pls .pil, .pls .o { margin: 5px 10px 5px 20px; }
 			.pls p em, .pls dt em { color: {NOTICETEXT}; }
-			.pls dd, .pls dt { float: left; overflow: hidden; height: 1.6em; line-height: 1.6em; }
+			.pls dd, .pls dt { float: left; /*overflow: hidden; height: 1.6em;*/ line-height: 1.6em; }
 				.pls dt { margin-right: 3px; width: 55px; }
-				.pls dd { width: 70px; }
+				.pls dd { width: 75px; }
 					.pls dd img { margin-top: -2px; max-width: 65px; }
 						.ie6 .pls dd img, .ie7 .pls dd img { margin-top: 2px; width: expression(this.width > 65 ? 65 : true); }
 	.ad .pls { background: {CONTENTSEPARATE}; padding: 0; height: 4px; }
