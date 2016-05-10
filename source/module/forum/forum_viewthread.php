@@ -1411,6 +1411,7 @@ function viewthread_profile_node($type, $post) {
 	include_once template('forum/viewthread_profile_node');
 	foreach($code as $k => $p) {
 		$p[] = $post;
+		$p[4]['field1'] = str_replace('-', '<br>', $p[4]['field1']);
 		$template = str_replace($k, call_user_func('viewthread_profile_nodeparse', $p), $template);
 	}
 	echo $template;

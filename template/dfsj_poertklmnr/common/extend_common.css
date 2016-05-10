@@ -58,5 +58,5 @@ dl.cl dt,dl.cl dd{padding: 0 !important;margin: 0 !important;}
 .avatar span.dengji{left: 70px;top: 87px; position: absolute;z-index: 157;}
 .m span.dengji {left: 70px;top: 97px; position: absolute;z-index: 157;}
 .m span.dengji img,.avatar span.dengji img{padding: 0;width: 88px;background: none;height: auto;}
-dd .nanr{width: 15px; height: 14px; display:inline-block;background: url({STYLEIMGDIR}/nan.png) repeat-x 0 100%;background-size: 15px 14px; }
-dd .nvr{width: 15px; height: 14px;display:inline-block;background: url({STYLEIMGDIR}/nv1.png) repeat-x 0 100%;background-size: 15px 14px;}
+dd .nanr{width: 13px; height: 13px; display:inline-block;background: url({STYLEIMGDIR}/nan.png) center no-repeat ;}
+dd .nvr{width: 13px; height: 13px;display:inline-block;background: url({STYLEIMGDIR}/nv1.png) center 1px no-repeat ;}
