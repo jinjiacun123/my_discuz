@@ -52,8 +52,8 @@ Created & Modified by ±±±±¡å.
 .zc_footer{color: #fff; font-size: 13px;text-align: center;}
 .zc_footer p{text-align: center;}
 .zc_footer p.p2{color: #999;}
-.pls .favatar dt{padding-left:3px;text-align: right;}
-.pls .favatar dd{margin-left:3px; }
+.pls .favatar dt{padding-left:3px;text-align: right;margin-bottom: 5px;}
+.pls .favatar dd{margin-left:3px;margin-bottom: 5px; }
 dl.cl dt,dl.cl dd{padding: 0 !important;margin: 0 !important;}
 .avatar span.dengji{left: 70px;top: 87px; position: absolute;z-index: 157;}
 .m span.dengji {left: 70px;top: 97px; position: absolute;z-index: 157;}
