@@ -1004,13 +1004,13 @@ EOF;
 		if(C::t('common_member')->fetch_uid_by_username($newusername) || C::t('common_member_archive')->fetch_uid_by_username($newusername)) {
 			cpmsg('members_add_username_duplicate', '', 'error');
 		}
-        if(!eregi("[^\x80-\xff]","$newusername")){
-		    if(strlen($newusername)>6 && strlen($newusername)>12){
-                cpmsg('members_add_username_duplicate_xm_ex', '', 'error');
-		    }
-		}else{
-			cpmsg('members_add_username_duplicate_xm', '', 'error');
-		}
+        // if(!eregi("[^\x80-\xff]","$newusername")){
+		//   if(strlen($newusername)>6 && strlen($newusername)>12){
+        //     cpmsg('members_add_username_duplicate_xm_ex', '', 'error');
+		//   }
+		// }else{
+		// 	   cpmsg('members_add_username_duplicate_xm', '', 'error');
+		// }
 		loaducenter();
         //$newemail = "1111@qq.com";
 		$uid = uc_user_register(addslashes($newusername), $newpassword, $newemail);

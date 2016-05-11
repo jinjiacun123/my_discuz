@@ -664,9 +664,9 @@ function showsetting($setname, $varname, $value, $type = 'radio', $disabled = ''
 			'</ul>';
 	} elseif($type == 'text' || $type == 'password' || $type == 'number') {
 		$s .= '<input name="'.$varname.'" value="'.dhtmlspecialchars($value).'" type="'.$type.'" class="txt" '.$check['disabled'].' '.$extra.' />';
-		if($varname == "newusername"){
-           $s .= '<br><span style="color:red">'.cplang("username_ts").'</span>';
-		}
+		// if($varname == "newusername"){
+  //          $s .= '<br><span style="color:red">'.cplang("username_ts").'</span>';
+		// }
 	} elseif($type == 'htmltext') {
 		$id .= 'html'.random(2);
 		$s .= '<div id="'.$id.'">'.$value.'</div><input id="'.$id.'_v" name="'.$varname.'" value="'.dhtmlspecialchars($value).'" type="hidden" /><script type="text/javascript">sethtml(\''.$id.'\')</script>';
