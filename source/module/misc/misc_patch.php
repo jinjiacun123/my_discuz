@@ -80,11 +80,11 @@ if($_GET['action'] == 'checkpatch') {
 	include template('common/header_ajax');
 	if($newversion) {
 		$lang = lang('forum/misc');
-		echo '<div class="bm"><div class="bm_h cl"><a href="javascript:;" onclick="$(\'plugin_notice\').style.display=\'none\';setcookie(\'pluginnotice\', 1, 86400)" class="y" title="'.$lang['patch_close'].'">'.$lang['patch_close'].'</a>';
-		echo '<h2 class="i">'.$lang['plugin_title'].'</h2></div><div class="bm_c">';
-		echo '<div class="cl bbda pbm">'.lang('forum/misc', 'plugin_memo', array('number' => $newversion)).'</div>';
-		echo '<div class="ptn cl"><a href="admin.php?action=plugins" class="xi2 y">'.$lang['plugin_link'].' &raquo;</a></div>';
-		echo '</div></div>';
+		// echo '<div class="bm"><div class="bm_h cl"><a href="javascript:;" onclick="$(\'plugin_notice\').style.display=\'none\';setcookie(\'pluginnotice\', 1, 86400)" class="y" title="'.$lang['patch_close'].'">'.$lang['patch_close'].'</a>';
+		// echo '<h2 class="i">'.$lang['plugin_title'].'</h2></div><div class="bm_c">';
+		// echo '<div class="cl bbda pbm">'.lang('forum/misc', 'plugin_memo', array('number' => $newversion)).'</div>';
+		// echo '<div class="ptn cl"><a href="admin.php?action=plugins" class="xi2 y">'.$lang['plugin_link'].' &raquo;</a></div>';
+		// echo '</div></div>';
 	}
 	include template('common/footer_ajax');
 	exit;
