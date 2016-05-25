@@ -61,5 +61,5 @@ dl.cl dt,dl.cl dd{padding: 0 !important;margin: 0 !important;}
 dd .nanr{width: 13px; height: 13px; display:inline-block;background: url({STYLEIMGDIR}/nan.png) center no-repeat ;}
 dd .nvr{width: 13px; height: 13px;display:inline-block;background: url({STYLEIMGDIR}/nv1.png) center 1px no-repeat ;}
 .suoshu{padding-bottom: 15px;}
-.daohts{color: #ff6600;display: inline;float: right;font-weight: 700;height: 28px; line-height: 28px;margin: 5px 8px 0;
-    overflow: hidden;padding-right: 10px; text-align: center; width: 200px;font-size: 13px;}
+.daohts{color: #ff6600; width: 220px;display: inline;float: right;font-weight: 700;height: 28px; line-height: 28px;margin: 5px 8px 0;
+    overflow: hidden;padding-right: 10px; text-align: center;font-size: 13px;}
