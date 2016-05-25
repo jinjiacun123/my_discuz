@@ -79,6 +79,7 @@ $lang = array (
   'my_nav_login' => '请 <a href="javascript:;" class="xi2" onclick="lsSubmit()"><strong>登录</strong></a> 后使用快捷导航<br />没有帐号？<a href="member.php?mod={$_G[setting][regname]}" class="xi2 xw1">$_G[\'setting\'][\'reglinkname\']</a>',
   'open_diy' => '打开 DIY 面板',
   'pm_center' => '消息',
+  'dh_tishi' => '请勿在本论坛发布与工作无关的帖子',
   'portal_block_manage' => '模块管理',
   'portal_manage' => '门户管理',
   'remind' => '提醒',

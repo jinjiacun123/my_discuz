@@ -127,7 +127,7 @@
                 <!--{subtemplate common/pubsearchform}-->
 				<div id="nv">
 					<a href="javascript:;" id="qmenu" onmouseover="delayShow(this, function () {showMenu({'ctrlid':'qmenu','pos':'34!','ctrlclass':'a','duration':2});showForummenu($_G[fid]);})">{lang my_nav}</a>
-					<span class="daohts">请勿在本论坛发布与工作无关的帖子</span>
+					<span class="daohts">{lang dh_tishi}</span>
 					<ul>
 						<!--{loop $_G['setting']['navs'] $nav}-->
 							<!--{if $nav['available'] && (!$nav['level'] || ($nav['level'] == 1 && $_G['uid']) || ($nav['level'] == 2 && $_G['adminid'] > 0) || ($nav['level'] == 3 && $_G['adminid'] == 1))}--><li {if $mnid == $nav[navid]}class="a" {/if}$nav[nav]></li><!--{/if}-->
