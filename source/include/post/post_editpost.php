@@ -434,7 +434,7 @@ if(!submitcheck('editsubmit')) {
 		if($isfirstpost && $isorigauthor && $_G['group']['allowreplycredit']) {
 			$param['replycredit_rule'] = $replycredit_rule;
 		}
-
+		
 		$modpost->editpost($param);
 
 	} else {

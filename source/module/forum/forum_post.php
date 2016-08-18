@@ -90,12 +90,18 @@ if(!empty($_GET['cedit'])) {
 if($_GET['action'] == 'edit' || $_GET['action'] == 'reply') {
 
 	$thread = C::t('forum_thread')->fetch($_G['tid']);
+	if ($thread['readperm'] != 0) {
+		$thread['readperms'] = explode(',',$thread['readperm']);
+	}
 	if(!$_G['forum_auditstatuson'] && !($thread['displayorder']>=0 || (in_array($thread['displayorder'], array(-4, -2)) && $thread['authorid']==$_G['uid']))) {
 		$thread = array();
 	}
 	if(!empty($thread)) {
-
-		if($thread['readperm'] && $thread['readperm'] > $_G['group']['readaccess'] && !$_G['forum']['ismoderator'] && $thread['authorid'] != $_G['uid']) {
+        //原来代码
+		//if($thread['readperm'] && $thread['readperm'] > $_G['group']['readaccess'] && !$_G['forum']['ismoderator'] && $thread['authorid'] != $_G['uid']) {
+        //新加代码
+        $readperm_ex = explode(',',$thread['readperm']);
+        if($thread['readperm'] && in_array($_G['group']['readaccess'], $readperm_ex) == false && !$_G['forum']['ismoderator'] && $thread['authorid'] != $_G['uid']) {
 			showmessage('thread_nopermission', NULL, array('readperm' => $thread['readperm']), array('login' => 1));
 		}
 
@@ -203,7 +209,8 @@ $subject = isset($_GET['subject']) ? dhtmlspecialchars(censor(trim($_GET['subjec
 $subject = !empty($subject) ? str_replace("\t", ' ', $subject) : $subject;
 $message = isset($_GET['message']) ? censor($_GET['message']) : '';
 $polloptions = isset($polloptions) ? censor(trim($polloptions)) : '';
-$readperm = isset($_GET['readperm']) ? intval($_GET['readperm']) : 0;
+//$readperm = isset($_GET['readperm']) ? intval($_GET['readperm']) : 0;
+$readperm = !empty($_GET['readperm']) ? implode(',', $_GET['readperm']) : 0;
 $price = isset($_GET['price']) ? intval($_GET['price']) : 0;
 
 if(empty($bbcodeoff) && !$_G['group']['allowhidecode'] && !empty($message) && preg_match("/\[hide=?\d*\].*?\[\/hide\]/is", preg_replace("/(\[code\](.+?)\[\/code\])/is", ' ', $message))) {

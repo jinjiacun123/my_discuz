@@ -53,15 +53,16 @@
 				<div id="extra_readperm_c" class="exfm cl" style="display:none">
 					<table cellspacing="0" cellpadding="0">
 						<tr>
-							<td class="xw1">{lang readperm}</td>
+							<td class="xw1" width="50">{lang readperm}</td>
 							<td>
-								<select name="readperm" id="readperm" class="ps" style="width:90px" onchange="extraCheck(1)">
-									<option value="">{lang unlimited}</option>
-									<!--{loop $_G['cache']['groupreadaccess'] $val}-->
-										<option value="$val[readaccess]" title="{lang readperm}: $val[readaccess]"{if $thread['readperm'] == $val[readaccess]} selected="selected"{/if}>$val[grouptitle]</option>
+								<!-- <select name="readperm" id="readperm" class="ps" style="width:90px" onchange="extraCheck(1)">
+									<option value="">{lang unlimited}</option> -->
+									<!--{loop $_G['cache']['groupreadaccess'] $val}-->	
+									    <input name="readperm[]" type="checkbox" value="$val[readaccess]" <!--{loop $thread['readperms'] $read}-->{if $read == $val[readaccess]} checked="checked"{/if}<!--{/loop}--> /><span title="{lang readperm}: $val[readaccess]">$val[grouptitle]</span>
+										<!-- <option value="$val[readaccess]" title="{lang readperm}: $val[readaccess]"{if $thread['readperm'] == $val[readaccess]} selected="selected"{/if}>$val[grouptitle]</option> -->
 									<!--{/loop}-->
-									<option value="255"{if $thread['readperm'] == 255} selected="selected"{/if}>{lang highest_right}</option>
-								</select>
+									<!-- <option value="255"{if $thread['readperm'] == 255} selected="selected"{/if}>{lang highest_right}222</option>
+								</select> -->
 								<span class="xg1">{lang post_select_usergroup_readacces}</span>
 							</td>
 						</tr>

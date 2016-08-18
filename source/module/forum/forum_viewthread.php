@@ -195,8 +195,11 @@ if($_G['forum']['price'] && !$_G['forum']['ismoderator']) {
 		dheader("Location: $_G[siteurl]forum.php?mod=forumdisplay&fid=$_G[fid]");
 	}
 }
-
-if($_G['forum_thread']['readperm'] && $_G['forum_thread']['readperm'] > $_G['group']['readaccess'] && !$_G['forum']['ismoderator'] && $_G['forum_thread']['authorid'] != $_G['uid']) {
+//原来代码
+//if($_G['forum_thread']['readperm'] && $_G['forum_thread']['readperm'] > $_G['group']['readaccess'] && !$_G['forum']['ismoderator'] && $_G['forum_thread']['authorid'] != $_G['uid']) {
+//新加代码
+$readperm_ex = explode(',', $_G['forum_thread']['readperm']);
+if($_G['forum_thread']['readperm'] && in_array($_G['group']['readaccess'], $readperm_ex) == false && !$_G['forum']['ismoderator'] && $_G['forum_thread']['authorid'] != $_G['uid']) {
 	showmessage('thread_nopermission', NULL, array('readperm' => $_G['forum_thread']['readperm']), array('login' => 1));
 }
 

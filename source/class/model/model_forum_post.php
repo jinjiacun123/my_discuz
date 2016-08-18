@@ -404,7 +404,7 @@ class model_forum_post extends discuz_model {
 
 
 
-			$this->param['readperm'] = $this->group['allowsetreadperm'] ? intval($this->param['readperm']) : ($isorigauthor ? 0 : 'ignore');
+			$this->param['readperm'] = $this->group['allowsetreadperm'] ? $this->param['readperm'] : ($isorigauthor ? 0 : 'ignore');
 			if($this->thread['special'] != 3) {
 				$this->param['price'] = intval($this->param['price']);
 				$this->param['price'] = $this->thread['price'] < 0 && !$this->thread['special']
